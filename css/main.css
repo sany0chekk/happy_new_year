@@ -57,7 +57,7 @@ body {
   line-height: 1;
   font-size: 16px;
   color: #ffffff;
-  background-image: url(../img/bg2.jpg);
+  background-image: url(../img/bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -87,34 +87,54 @@ body {
 }
 
 .start__inner {
-  height: 100vh;
+  position: absolute;
+  top: 20%;
+  right: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 609px) {
+  .start__inner {
+    right: 0;
+  }
+}
 
 .start__click {
   margin-bottom: 20px;
   font-family: "Pacifico";
-  font-size: 30px;
+  font-size: 50px;
 }
 .start__click span {
   padding: 0px 10px;
 }
+@media (max-width: 609px) {
+  .start__click {
+    font-size: 20px;
+  }
+}
 
 .start-btn {
   padding: 30px 50px;
-  background-color: #ff0022;
+  background-color: #ffffff;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px #ff0022;
+  box-shadow: 0px 0px 15px #ffffff;
   font-family: "Rubik Bubbles";
-  font-size: 50px;
-  color: #ffffff;
+  font-size: 70px;
+  color: #0084ff;
   transition: box-shadow 0.2s linear;
 }
+.start-btn span {
+  color: #ffd900;
+}
 .start-btn:hover {
-  box-shadow: 0px 0px 55px #ff0022;
+  box-shadow: 0px 0px 55px #ffffff;
+}
+@media (max-width: 609px) {
+  .start-btn {
+    font-size: 30px;
+  }
 }
 
 .happy__content {
@@ -128,6 +148,11 @@ body {
   background-color: #ff0022;
   border-radius: 30px;
   box-shadow: 0px 0px 115px #ffffff;
+  transform: translateY(-250px);
+}
+.happy__content.element__show {
+  transition: all 1.5s;
+  transform: translateY(0);
 }
 
 .happy__title {
@@ -149,6 +174,12 @@ body {
 .happy__desc:not(:last-child) {
   margin-bottom: 30px;
 }
+.happy__desc--blue {
+  color: #0084ff;
+}
+.happy__desc--blue span {
+  color: #ffd900;
+}
 
 /*						*/
 .activate {
@@ -157,4 +188,45 @@ body {
 
 .deactivate {
   display: none;
+}
+
+.countdown-title {
+  font-family: "Pacifico";
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+.countdown {
+  font-family: sans-serif;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+.countdown-number {
+  padding: 10px;
+  border-radius: 3px;
+  background: #ffffff;
+  display: inline-block;
+}
+
+.countdown-time {
+  font-family: "Rubik Bubbles";
+  padding: 15px;
+  border-radius: 3px;
+  background: #e7e7e7;
+  color: #0084ff;
+  display: inline-block;
+}
+
+.countdown-text {
+  font-family: "Rubik Bubbles";
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+  color: #ffd900;
 }

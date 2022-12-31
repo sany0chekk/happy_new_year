@@ -9,35 +9,51 @@
 	text-align: center;
 }
 .start__inner {
-	height: 100vh;
+	position: absolute;
+	top: 20%;
+	right: 10%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	@media(max-width: 609px){
+		right: 0;
+	}
 }
 .start__click {
 	margin-bottom: 20px;
 	font-family: $font-main;
-	font-size: 30px;
+	font-size: 50px;
 	& span{
 		padding: 0px 10px;
+	}
+	@media(max-width: 609px){
+		font-size: 20px;
 	}
 }
 .start-btn {
 	padding: 30px 50px;
 
-	background-color: $background;
+	background-color: $white;
 	border-radius: 30px;
-	box-shadow: 0px 0px 15px $background;
+	box-shadow: 0px 0px 15px $white;
 
 	font-family: $font-button;
-	font-size: 50px;
-	color: $white;
+	font-size: 70px;
+	color: $blue;
 
 	transition: box-shadow .2s linear;
 
+	& span{
+		color: $yellow;
+	}
 	&:hover{
-		box-shadow: 0px 0px 55px $background;
+		box-shadow: 0px 0px 55px $white;
+	}
+
+	@media(max-width: 609px){
+		font-size: 30px;
 	}
 }
 .happy__content {
@@ -53,6 +69,11 @@
 	border-radius: 30px;
 	box-shadow: 0px 0px 115px $white;
 
+	transform: translateY(-250px);
+	&.element__show{
+		transition: all 1.5s;
+		transform: translateY(0);
+	}
 }
 .happy__title{
 	margin-bottom: 50px;
@@ -71,6 +92,13 @@
 	&:not(:last-child){
 		margin-bottom: 30px;
 	}
+
+	&--blue{
+		color: $blue;
+		& span{
+			color: $yellow;
+		}
+	}
 }
 
 /*						*/
@@ -79,4 +107,45 @@
 }
 .deactivate{
 	display: none;
+}
+
+.countdown-title {
+	font-family: $font-main;
+  color: $white;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+.countdown {
+  font-family: sans-serif;
+  color: $white;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+.countdown-number {
+  padding: 10px;
+  border-radius: 3px;
+  background: $white;
+  display: inline-block;
+}
+
+.countdown-time {
+	font-family: $font-button;
+  padding: 15px;
+  border-radius: 3px;
+  background: $gray;
+	color: $blue;
+  display: inline-block;
+}
+
+.countdown-text {
+	font-family: $font-button;
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+	color: $yellow;
 }
