@@ -1,0 +1,11 @@
+/*               Settings                  */
+@import "./settings/fonts";
+@import "./settings/vars";
+@import "./settings/helpers";
+@import './settings/reset';
+@import "./settings/style";
+
+/*               Blocks                   */
+@import "./components/header";
+@import "./components/happy";
+@import "./components/footer";
