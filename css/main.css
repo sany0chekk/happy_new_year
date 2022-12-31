@@ -148,7 +148,7 @@ body {
   background-color: #ff0022;
   border-radius: 30px;
   box-shadow: 0px 0px 115px #ffffff;
-  transform: translateY(-250px);
+  transform: translateY(-50px);
 }
 .happy__content.element__show {
   transition: all 1.5s;
