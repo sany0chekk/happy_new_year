@@ -48,7 +48,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "January 01 2023 00:00:00 GMT+0200"; //for Ukraine
+var deadline = "January 01 2024 00:00:00 GMT+0200"; //for Ukraine
 initializeClock("countdown", deadline);
 
 function onEntry(entry) {

@@ -67,7 +67,7 @@
 	border: 1px solid $background;
 	background-color: $background;
 	border-radius: 30px;
-	box-shadow: 0px 0px 115px $white;
+	box-shadow: 0px 0px 115px rgb(97, 97, 97);
 
 	transform: translateY(-250px);
 	&.element__show{
@@ -88,6 +88,11 @@
 	font-family: $font-main;
 	font-size: 30px;
 	line-height: 50px;
+
+	& span{
+		font-size: 50px;
+		line-height: 150px;
+	}
 	
 	&:not(:last-child){
 		margin-bottom: 30px;
@@ -95,6 +100,7 @@
 
 	&--blue{
 		color: $blue;
+		font-size: 50px;
 		& span{
 			color: $yellow;
 		}
